@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  h1 Enter Your Words
+  form(method="POST" action="/story" id="words")
+    label(for="noun1") Noun (singular):
+      input(type="text" name="noun1" id="noun1")
+    br
+    label(for="noun2") Noun (singular):
+      input(type="text" name="noun2" id="noun2")
+    br
+    label(for="noun2") Noun (plural):
+      input(type="text" name="plrnoun" id="plrnoun")
+    br
+    label(for="verb1") Verb:
+      input(type="text" name="verb1" id="verb1")
+    br
+    label(for="verb1") Verb (Past):
+      input(type="text" name="verbPast" id="verbPast")
+    br
+    label(for="verb1") Verb (-ing):
+      input(type="text" name="verbing" id="verbing")
+    br
+    label(for="adjective1") Adjective:
+      input(type="text" name="adjective1" id="adjective1")
+    br
+    label(for="adjective1") Adverb:
+      input(type="text" name="adverb" id="adverb")
+  label(for="storyChoice") Choose One
+  select(form="words" name="storyChoice" id="storyChoice")
+    option(value="1") Story 1
+    option(value="2") Story 2
+    option(value="3") Story 3
+  br
+  button(type="submit" form="words") Tell Me a Story
